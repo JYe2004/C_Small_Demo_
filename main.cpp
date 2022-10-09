@@ -48,7 +48,8 @@ int main(void)
         for ( j = 0; j < i + 1; ++j)
         {
             index[i][j] = 1;
-            if (i > 1)
+            if (i >= 1) //从第二行开始
+//          if (i > 1)也行 -- 从第三行开始
                 index[i][j] = index[i - 1][j - 1] + index[i - 1][j];
             printf("%6d" , index[i][j]);
         }
